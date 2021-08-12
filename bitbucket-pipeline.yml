@@ -1,0 +1,12 @@
+pipeline:
+  branches: # defintion de la branche specifique du pipeleine
+    main: 
+      -step: 
+        name: build and test the app
+        image: node:latest
+        script:
+          -npm install
+          -npm run test
+          -npm run build
+  #default: 
+  #custom:
